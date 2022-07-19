@@ -1,18 +1,20 @@
+# Git
+
+```bash
 git init            # initiates git in the current directory
 git remote add origin https://github.com/repo_name.git        # add remote reposiory
 git clone <address> # creates a git repo from given address (get the address from your git-server)
 git clone <address> -b <branch_name> <path/to/directory>  # clones a git repo from the address into the given directory and checkout's the given branch
 git clone <address> -b <branch_name> --single-branch  # Clones a single branch
+```
 
 git add <file_name>   # adds(stages) file.txt to the git
 git add *          # adds(stages) all new modifications, deletions, creations to the git
 git reset file.txt # Removes file.txt from the stage
 git reset --hard   # Throws away all your uncommitted changes, hard reset files to HEAD
 git reset --soft <commit_id> # moves the head pointer
-git reset --mixed <commit_id> # moves the head pointer and then copies the files from the commit it is now pointing to the staging area,
-# the default when no argument is provided
-git reset -hard <commit_id> # moves the head pointer and then copies the files from the commit it is now pointing to the staging area 
-# and working directory thus, throw away all uncommitted changes
+git reset --mixed <commit_id> # moves the head pointer and then copies the files from the commit it is now pointing to the staging area, the default when no argument is provided
+git reset -hard <commit_id> # moves the head pointer and then copies the files from the commit it is now pointing to the staging area and working directory thus, throw away all uncommitted changes
 
 # git reset
 # 1. Move HEAD and current branch
@@ -22,6 +24,7 @@ git reset -hard <commit_id> # moves the head pointer and then copies the files f
 # --soft = (1)
 # --mixed = (1) & (2) (default)
 # --hard = (1) & (2) & (3)
+
 
 git rm file.txt    # removes file.txt both from git and file system
 git rm --cached file.txt # only removes file.txt both from git index
