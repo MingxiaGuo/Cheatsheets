@@ -1,15 +1,118 @@
 # Git
 
+# Git
+
+Git Essentials - Second Edition
+* Safari books online: https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/IT%20Content%20Availability/page/Safari%20Books%20Online
+* Book: https://learning.oreilly.com/library/view/git-essentials-/9781787120723/
+* Video: https://learning.oreilly.com/videos/essential-git/200000006A0403
+
+Git Free Stuff: https://git-scm.com/book/en/v2
+
+How to get started with GIT and work with GIT Remote Repo https://www.ntu.edu.sg/home/ehchua/programming/howto/Git_HowTo.html
+
+squashing commits with rebase : http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html
+
+Git: Amend your last commit: https://nathanhoad.net/git-amend-your-last-commit/
+
+How to Write a Git Commit Message: https://chris.beams.io/posts/git-commit/
+
+Interesting relating git commits: https://wiki.openstack.org/wiki/GitCommitMessages
+
+Help Overview https://help.github.com/en
+
+猴子都能懂到git入门  ：https://backlog.com/git-tutorial/cn/stepup/stepup7_2.html
+
+Semantic versioning 2.0.0.   https://semver.org/
+
+Keep a changing https://keepachangelog.com/en/1.0.0/
+
+git：cherry-pick、revert、reset介绍 https://segmentfault.com/a/1190000009582874
+
+Learn Git with Bitbucket Cloud: https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
+
+https://www.jianshu.com/p/4079284dd970
+
+
+
+
 ```bash
 git init            # initiates git in the current directory
+git clone --recursive https://github.ibm.com/genctl/fleetman-workspace.git
+
+git add <file_name>   # adds(stages) file.txt to the git
+git add .          # adds(stages) all new modifications, deletions, creations to the git
+
+git commit -m "msg"          # commit changes with a msg
+git commit -m "title" -m "description" # commit changes with a title and description
+git commit --amend           # combine staged changes with the previous commit, or edit the previous commit message without changing its snapshot
+git commit --amend --no-edit # amends a commit without changing its commit message
+git commit --amend --author='Author Name <email@address.com>'    # Amend the author of a commit
+git commit -s
+
+git status         # shows the modifications and stuff that are not staged yet
+
+git pull      # 可以省略, git pull = git fetch + git merge
+git pull #
+git fetch     # 下载远程仓库最新内容，不做合并 
+git push origin master
+git push -f
+
+git rebase
+git rebase -i HEAD~4
+git rebase --continue
+git reset    # 把HEAD指向master最新版本
+git reset --hard origin/master
+
+git branch -d <branch_name>                          # remotes/origin/分支名 #删除本地分支
+git branch -D 分支名                                  #强制删本地
+git push origin --delete 分支名）              # 删除远程分支：（remotes/origin/分支名
+
+git checkout <branch_name>
+
+git submodule update --recursive --init
+
+git log
+
+git 放弃本地修改，强制拉取更新
+* git fetch --all 
+* git reset --hard origin/master 
+* git pull //可以省略
+
+git squash 
+
+
+
+Mac terminal终端配置代理
+
+#设置 注意都要设置 这几个是不同的
+git config --global https.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080
+git config --global http.proxy 'socks5://127.0.0.1:1080' 
+git config --global https.proxy 'socks5://127.0.0.1:1080'
+
+#取消
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+
+
+git remote set-url origin git@github.XXX.com:mStar/OTT-dual/K3S/supernova
+
+$ git format-patch <branch> <options>
+$ git am <patch_file>
+
+
+```
+
+
+```bash
+
 git remote add origin https://github.com/repo_name.git        # add remote reposiory
 git clone <address> # creates a git repo from given address (get the address from your git-server)
 git clone <address> -b <branch_name> <path/to/directory>  # clones a git repo from the address into the given directory and checkout's the given branch
 git clone <address> -b <branch_name> --single-branch  # Clones a single branch
-```
 
-git add <file_name>   # adds(stages) file.txt to the git
-git add *          # adds(stages) all new modifications, deletions, creations to the git
+
 git reset file.txt # Removes file.txt from the stage
 git reset --hard   # Throws away all your uncommitted changes, hard reset files to HEAD
 git reset --soft <commit_id> # moves the head pointer
@@ -28,7 +131,7 @@ git reset -hard <commit_id> # moves the head pointer and then copies the files f
 
 git rm file.txt    # removes file.txt both from git and file system
 git rm --cached file.txt # only removes file.txt both from git index
-git status         # shows the modifications and stuff that are not staged yet
+
 
 git branch                         # shows all the branches (current branch is shown with a star)
 git branch -a                     # shows all the branches local and remote
@@ -69,11 +172,7 @@ git log --grep='<string/regex>'                   # Search Commit log
 git reflog                       # record when the tips of branches and other references were updated in the local repository.
 git ls-files                     # show information about files in the index and the working tree
 
-git commit -m "msg"          # commit changes with a msg
-git commit -m "title" -m "description" # commit changes with a title and description
-git commit --amend           # combine staged changes with the previous commit, or edit the previous commit message without changing its snapshot
-git commit --amend --no-edit # amends a commit without changing its commit message
-git commit --amend --author='Author Name <email@address.com>'    # Amend the author of a commit
+
 git push my-remote my-branch # pushes the commits to the my-remote in my-branch (does not push the tags)
 git revert <commit-id>       # Undo a commit by creating a new commit
 
@@ -176,3 +275,4 @@ git archive <branch_name> --format=zip --outpute=./<archive_name>.zip # create a
 # Some tools to improve git skill by visualizing it:
 #   https://git-school.github.io/visualizing-git/
 #   https://learngitbranching.js.org/
+```
