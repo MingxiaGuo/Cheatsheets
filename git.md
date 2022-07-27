@@ -1,35 +1,23 @@
 # Git
 
-# Git
-
 Git Essentials - Second Edition
 * Safari books online: https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/IT%20Content%20Availability/page/Safari%20Books%20Online
 * Book: https://learning.oreilly.com/library/view/git-essentials-/9781787120723/
 * Video: https://learning.oreilly.com/videos/essential-git/200000006A0403
-
-Git Free Stuff: https://git-scm.com/book/en/v2
-
-How to get started with GIT and work with GIT Remote Repo https://www.ntu.edu.sg/home/ehchua/programming/howto/Git_HowTo.html
-
-squashing commits with rebase : http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html
-
-Git: Amend your last commit: https://nathanhoad.net/git-amend-your-last-commit/
-
-How to Write a Git Commit Message: https://chris.beams.io/posts/git-commit/
-
-Interesting relating git commits: https://wiki.openstack.org/wiki/GitCommitMessages
-
-Help Overview https://help.github.com/en
-
-猴子都能懂到git入门  ：https://backlog.com/git-tutorial/cn/stepup/stepup7_2.html
+* Git Free Stuff: https://git-scm.com/book/en/v2
+* How to get started with GIT and work with GIT Remote Repo https://www.ntu.edu.sg/home/ehchua/programming/howto/Git_HowTo.html
+* squashing commits with rebase : http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html
+* Git: Amend your last commit: https://nathanhoad.net/git-amend-your-last-commit/
+* How to Write a Git Commit Message: https://chris.beams.io/posts/git-commit/
+* Interesting relating git commits: https://wiki.openstack.org/wiki/GitCommitMessages
+* Help Overview https://help.github.com/en
+* 猴子都能懂到git入门  ：https://backlog.com/git-tutorial/cn/stepup/stepup7_2.html
+* git：cherry-pick、revert、reset介绍 https://segmentfault.com/a/1190000009582874
+* Learn Git with Bitbucket Cloud: https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
 
 Semantic versioning 2.0.0.   https://semver.org/
 
 Keep a changing https://keepachangelog.com/en/1.0.0/
-
-git：cherry-pick、revert、reset介绍 https://segmentfault.com/a/1190000009582874
-
-Learn Git with Bitbucket Cloud: https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud
 
 https://www.jianshu.com/p/4079284dd970
 
