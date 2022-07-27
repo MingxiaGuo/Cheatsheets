@@ -3,6 +3,11 @@
 * PDF: https://sematext.com/kubernetes-cheat-sheet/
 * WEBSITE: https://kubernetes.io/
 * DOCUMENTATION: https://kubernetes.io/docs/home
+* Command line tool (kubectl): https://kubernetes.io/docs/reference/kubectl/
+* kubectl Cheat Sheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/
+* kubectl for Docker Users: https://kubernetes.io/docs/reference/kubectl/docker-cli-to-kubectl/
+* kubectl-commands: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands
+* JSONPath Support: https://kubernetes.io/docs/reference/kubectl/jsonpath/
 
 ## Client Configuration
 
