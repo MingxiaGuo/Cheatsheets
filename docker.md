@@ -49,32 +49,32 @@ docker-compose run -rm -p 2022:22 web bash      # Start web service and runs bas
 # DOCKER SERVICES 
 ##############################################################################
 
-
+```
 docker service create <options> <image> <command>   # Create new service
 docker service inspect --pretty <service_name>      # Display detailed information Service(s)
 docker service ls                                   # List Services
 docker service ps                                   # List the tasks of Services
 docker service scale <service_name>=<replica>       # Scale special service(s)
 docker service update <options> <service_name>      # Update Service options
-
+```
 
 ##############################################################################
 # DOCKER STACK 
 ##############################################################################
 
-
+```
 docker stack ls                                 # List all running applications on this Docker host
 docker stack deploy -c <composefile> <appname>  # Run the specified Compose file
 docker stack services <appname>                 # List the services associated with an app
 docker stack ps <appname>                       # List the running containers associated with an app
 docker stack rm <appname>                       # Tear down an application
-
+```
 
 ##############################################################################
 # DOCKER MACHINE
 ##############################################################################
 
-
+```
 docker-machine create --driver virtualbox myvm1                           # Create a VM (Mac, Win7, Linux)
 docker-machine create -d hyperv --hyperv-virtual-switch "myswitch" myvm1  # Win10
 docker-machine env myvm1                                                  # View basic information about your node
@@ -89,3 +89,4 @@ docker-machine stop $(docker-machine ls -q)                               # Stop
 docker-machine rm $(docker-machine ls -q)                                 # Delete all VMs and their disk images
 docker-machine scp docker-compose.yml myvm1:~                             # Copy file to node's home dir
 docker-machine ssh myvm1 "docker stack deploy -c <file> <app>"            # Deploy an app
+```
