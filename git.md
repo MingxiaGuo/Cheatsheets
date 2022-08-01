@@ -1,6 +1,6 @@
 # Git
-
-Git Essentials - Second Edition
+* Git User Manual: https://www.kernel.org/pub/software/scm/git/docs/user-manual.html
+* Git Essentials - Second Edition
 * Safari books online: https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/IT%20Content%20Availability/page/Safari%20Books%20Online
 * Book: https://learning.oreilly.com/library/view/git-essentials-/9781787120723/
 * Video: https://learning.oreilly.com/videos/essential-git/200000006A0403
@@ -55,6 +55,7 @@ git push origin --delete <branch_name> # delete remote branch
 git push --delete my-remote v1.0  # deletes the tag in my-remote (be carefore to not delete a branch)
 git push my-remote my-branch # pushes the commits to the my-remote in my-branch (does not push the tags)
 git push my-remote my-branch v1.0 # push v1.0 tag to my-remote in my-branch
+git push -u origin master
 
 git branch                         # shows all the branches (current branch is shown with a star)
 git branch my-branch               # creates my-branch
@@ -101,7 +102,7 @@ git config --global --unset https.proxy
 git remote                         # shows the remotes
 git remote -v                      # shows the remote for pull and push
 git remote add my-remote <address> # creates a remote (get the address from your git-server)
-git remote rm my-remote            # Remove a remote
+git remote rm my-remote            # Remove a remote.  git remote add origin git@github.com:PointsExchangeOrg/PointsExchange.git
 git remote set-url origin git@github.XXX.com:mStar/OTT-dual/K3S/supernova
 git remote add origin https://github.com/repo_name.git        # add remote reposiory
 
