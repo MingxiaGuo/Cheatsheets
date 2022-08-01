@@ -4,11 +4,17 @@
 
 ```
 docker build -t friendlyname .              # Create image using this directory's Dockerfile
+docker run 
+          -it                               # 交互
+          -d                                # 后台运行
+          -p                                # 端口映射
+          -v                                # 磁盘挂载
 docker run -p 4000:80 friendlyname          # Run "friendlyname" mapping port 4000 to 80
 docker run -d -p 4000:80 friendlyname       # Same thing, but in detached mode
 docker exec -it [container-id] bash         # Enter a running container
-docker ps                                   # See a list of all running containers
+docker start                                # 启动已终止的容器
 docker stop <hash>                          # Gracefully stop the specified container
+docker ps                                   # See a list of all running containers
 docker ps -a                                # See a list of all containers, even the ones not running
 docker kill <hash>                          # Force shutdown of the specified container
 docker rm <hash>                            # Remove the specified container from this machine
@@ -25,6 +31,8 @@ docker system prune                         # Remove all unused containers, netw
 docker system prune -a                      # Remove all unused containers, networks, images not just dangling ones (Docker 17.06.1-ce and superior)
 docker volume prune                         # Remove all unused local volumes
 docker network prune                        # Remove all unused networks
+docker inspect <containerid>                # 查看容器细节
+docker cp file1 <containerid>:/file-to-path # 拷贝文件至容器内
 ```
 
 ##############################################################################
