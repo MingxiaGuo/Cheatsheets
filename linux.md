@@ -1,5 +1,14 @@
 # Linux
 
+#
+```shell
+ls
+wget
+mkdir upper lower merged work # 同时创建四个文件 upper lower merged work
+
+ps -ef
+```
+
 # systemctl 
 systemctl may be used to introspect and control the state of the "systemd" system and service manager.
 
