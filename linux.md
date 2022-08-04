@@ -2,10 +2,12 @@
 
 #
 ```shell
+cd 
 ls
 wget
 mkdir upper lower merged work # 同时创建四个文件 upper lower merged work
-
+scp
+ssh
 ps -ef
 ```
 
