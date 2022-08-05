@@ -88,6 +88,10 @@ git config --global alias.<handle> <command> # add git aliases to speed up workf
 # if  handle is st and command is status then running git st would execute git status 
 git config --global core.editor <editor_name>      # config default editor
 
+
+git config --global core.quotepath false  # Display UTF-8 characters in filenames, if you're having problems seeing them
+
+ 
 Mac terminal终端配置代理
 #设置 注意都要设置 这几个是不同的
 git config --global https.proxy http://127.0.0.1:1080
