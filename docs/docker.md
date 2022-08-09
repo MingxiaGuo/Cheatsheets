@@ -2,7 +2,7 @@
 # DOCKER
 ##############################################################################
 
-```
+```bash
 docker build -t friendlyname .              # Create image using this directory's Dockerfile
 docker run 
           -it                               # 交互
@@ -39,7 +39,7 @@ docker cp file1 <containerid>:/file-to-path # 拷贝文件至容器内
 # DOCKER COMPOSE
 ##############################################################################
 
-```
+```bash
 docker-compose up                               # Create and start containers
 docker-compose up -d                            # Create and start containers in detached mode
 docker-compose down                             # Stop and remove containers, networks, images, and volumes
@@ -57,7 +57,7 @@ docker-compose run -rm -p 2022:22 web bash      # Start web service and runs bas
 # DOCKER SERVICES 
 ##############################################################################
 
-```
+```bash
 docker service create <options> <image> <command>   # Create new service
 docker service inspect --pretty <service_name>      # Display detailed information Service(s)
 docker service ls                                   # List Services
@@ -70,7 +70,7 @@ docker service update <options> <service_name>      # Update Service options
 # DOCKER STACK 
 ##############################################################################
 
-```
+```bash
 docker stack ls                                 # List all running applications on this Docker host
 docker stack deploy -c <composefile> <appname>  # Run the specified Compose file
 docker stack services <appname>                 # List the services associated with an app
@@ -82,7 +82,7 @@ docker stack rm <appname>                       # Tear down an application
 # DOCKER MACHINE
 ##############################################################################
 
-```
+```bash
 docker-machine create --driver virtualbox myvm1                           # Create a VM (Mac, Win7, Linux)
 docker-machine create -d hyperv --hyperv-virtual-switch "myswitch" myvm1  # Win10
 docker-machine env myvm1                                                  # View basic information about your node

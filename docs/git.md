@@ -23,56 +23,13 @@ https://www.jianshu.com/p/4079284dd970
 
 
 
-
+## common
 ```bash
 git init            # initiates git in the current directory
-
-git clone <address> # creates a git repo from given address (get the address from your git-server)
-git clone <address> -b <branch_name> <path/to/directory>  # clones a git repo from the address into the given directory and checkout's the given branch
-git clone <address> -b <branch_name> --single-branch  # Clones a single branch
-git clone --recursive https://github.ibm.com/genctl/fleetman-workspace.git
-
 git add <file_name>   # adds(stages) file.txt to the git
 git add .          # adds(stages) all new modifications, deletions, creations to the git
-
-git commit -m "msg"          # commit changes with a msg
-git commit -m "title" -m "description" # commit changes with a title and description
-git commit --amend           # combine staged changes with the previous commit, or edit the previous commit message without changing its snapshot
-git commit --amend --no-edit # amends a commit without changing its commit message
-git commit --amend --author='Author Name <email@address.com>'    # Amend the author of a commit
-git commit -s
-
 git status         # shows the modifications and stuff that are not staged yet
-
 git fetch     # 下载远程仓库最新内容，不做合并 
-
-git pull      # 可以省略, git pull = git fetch + git merge
-git pull my-remote my-branch   # pulls and tries to merge my-branch from my-remote to the current branch git pull = git fetch && get merge
-
-git push origin master
-git push -f
-git push origin --delete <branch_name> # delete remote branch
-git push --delete my-remote v1.0  # deletes the tag in my-remote (be carefore to not delete a branch)
-git push my-remote my-branch # pushes the commits to the my-remote in my-branch (does not push the tags)
-git push my-remote my-branch v1.0 # push v1.0 tag to my-remote in my-branch
-git push -u origin master
-
-git branch                         # shows all the branches (current branch is shown with a star)
-git branch my-branch               # creates my-branch
-git branch -a                      # List all local and remote branches
-git branch -d <branch_name>                          # deletes my-branch (remotes/origin/分支名) 
-git branch -D 分支名                                  #强制删本地
-git branch -m <new-branch-name>    # rename the branch
-git branch -vv                     # list all branches and their upstreams, as well as last commit on branch
-
-git checkout <branch_name>           # switches to my-branch
-git checkout --orphan <branch_name> # checkout a branch with no commit history
-
-
-   	   
-git merge my-branch                # merges my-branch to current branch
-
-
 
 
 git 放弃本地修改，强制拉取更新
@@ -81,13 +38,72 @@ git 放弃本地修改，强制拉取更新
 * git pull //可以省略
 
 
+```
+## git clone
+```bash
+git clone <address> # creates a git repo from given address (get the address from your git-server)
+git clone <address> -b <branch_name> <path/to/directory>  # clones a git repo from the address into the given directory and checkout's the given branch
+git clone <address> -b <branch_name> --single-branch  # Clones a single branch
+git clone --recursive https://github.ibm.com/genctl/fleetman-workspace.git
+```
 
+## git commit
+```bash
+git commit -m "msg"          # commit changes with a msg
+git commit -m "title" -m "description" # commit changes with a title and description
+git commit --amend           # combine staged changes with the previous commit, or edit the previous commit message without changing its snapshot
+git commit --amend --no-edit # amends a commit without changing its commit message
+git commit --amend --author='Author Name <email@address.com>'    # Amend the author of a commit
+git commit -s
+```
+
+## git pull
+
+```bash
+git pull      # 可以省略, git pull = git fetch + git merge
+git pull my-remote my-branch   # pulls and tries to merge my-branch from my-remote to the current branch git pull = git fetch && get merge
+```
+
+## git push
+```bash
+git push origin master
+git push -f
+git push origin --delete <branch_name> # delete remote branch
+git push --delete my-remote v1.0  # deletes the tag in my-remote (be carefore to not delete a branch)
+git push my-remote my-branch # pushes the commits to the my-remote in my-branch (does not push the tags)
+git push my-remote my-branch v1.0 # push v1.0 tag to my-remote in my-branch
+git push -u origin master
+```
+
+## git branch
+```bash
+git branch                         # shows all the branches (current branch is shown with a star)
+git branch my-branch               # creates my-branch
+git branch -a                      # List all local and remote branches
+git branch -d <branch_name>                          # deletes my-branch (remotes/origin/分支名) 
+git branch -D 分支名                                  #强制删本地
+git branch -m <new-branch-name>    # rename the branch
+git branch -vv                     # list all branches and their upstreams, as well as last commit on branch
+```
+
+## git checkout 
+```bash
+git checkout <branch_name>           # switches to my-branch
+git checkout --orphan <branch_name> # checkout a branch with no commit history
+```
+
+## git merge 
+```bash   	   
+git merge my-branch                # merges my-branch to current branch
+```
+
+## git config
+```bash
 git config --global --list                   # lists the git configuration for all repos
 git config --global --edit                   # opens an editor to edit the git config file
 git config --global alias.<handle> <command> # add git aliases to speed up workflow , eg.
 # if  handle is st and command is status then running git st would execute git status 
 git config --global core.editor <editor_name>      # config default editor
-
 
 git config --global core.quotepath false  # Display UTF-8 characters in filenames, if you're having problems seeing them
 
@@ -99,20 +115,23 @@ git config --global https.proxy https://127.0.0.1:1080
 git config --global http.proxy 'socks5://127.0.0.1:1080' 
 git config --global https.proxy 'socks5://127.0.0.1:1080'
 
+git config --global http.proxy http://proxy.us.ibm.com:8080
 #取消
 git config --global --unset http.proxy
 git config --global --unset https.proxy
-
+```
+## git remote
+```bash
 git remote                         # shows the remotes
 git remote -v                      # shows the remote for pull and push
 git remote add my-remote <address> # creates a remote (get the address from your git-server)
 git remote rm my-remote            # Remove a remote.  git remote add origin git@github.com:PointsExchangeOrg/PointsExchange.git
 git remote set-url origin git@github.XXX.com:mStar/OTT-dual/K3S/supernova
 git remote add origin https://github.com/repo_name.git        # add remote reposiory
+```
 
-
-
-
+## git log 
+```bash
 git log                      # shows the log of commits
 # git log by default uses less command so you can use these: f=next page, b=prev page, search=/<query>, n=next match, p=prev match, q=quit
 git log --no-pager    # shows the log of commits without less command
@@ -126,19 +145,25 @@ git log -n <x>               # lists the last x commits
 git log -n <x> --oneline     # lists the last x commits, each commit in single line
 git grep --heading --line-number '<string/regex>' # Find lines matching the pattern in tracked files
 git log --grep='<string/regex>'                   # Search Commit log
+```
 
 git reflog                       # record when the tips of branches and other references were updated in the local repository.
 git ls-files                     # show information about files in the index and the working tree
 
-
+## git clean
+```bash
 git clean -f                      # clean untracked files permanently
 git clean -f -d/git clean -fd     # To remove directories permanently
 git clean -f -X/git clean -fX    # To remove ignored files permanently
 git clean -f -x/git clean -fx     # To remove ignored and non-ignored files permanently
 git clean -d --dry-run            # shows what would be deleted
-
+```
+## git reset 
+```bash
 git revert <commit-id>       # Undo a commit by creating a new commit
-
+```
+## git reset 
+```bash
 git reset    # 把HEAD指向master最新版本
 git reset  --hard origin/master
 git reset file.txt # Removes file.txt from the stage
@@ -153,15 +178,24 @@ git reset -hard <commit_id> # moves the head pointer and then copies the files f
 # --soft = (1)
 # --mixed = (1) & (2) (default)
 # --hard = (1) & (2) & (3)
+```
 
+## git rebase
+
+```bash
 git rebase -i HEAD~4
 git rebase -i <commit_id>         # Rebase commits from a commit ID
 git rebase --continue             # Continue rebasing after fixing all conflicts
 git rebase --abort                # Abort a running rebase
-
+```
+## git cherry-pick
+```bash
 git cherry-pick <commit_id>                     # merge the specified commit
 git cherry-pick <commit_id_A>^..<commit_id_B>   # pick the entire range of commits where A is older than B ( the ^ is for including A as well )
+```
 
+## git stash
+```bash
 git stash                            # stashes the staged and unstaged changes (git status will be clean after it)
 git stash -u                         # stash everything including new untracked files (but not .gitignore)
 git stash save "msg"                 # stash with a msg
@@ -173,7 +207,8 @@ git stash apply                      # keep the stash and applies it to the git
 git stash branch my-branch stash@{1} # creates a branch from your stash
 git stash drop stash@{1}             # deletes the {1} stash
 git stash clear                      # clears all the stash
-
+```
+```sh
 git show                    # shows one or more objects (blobs, trees, tags and commits).
 
 git diff                     # show changes between commits, commit and working tree
@@ -181,7 +216,9 @@ git diff HEAD               #show changes between working directory vs last comm
 git diff --staged HEAD    #show changes between stage area vs last commit
 git diff --color             # show colored diff
 git diff --staged            # Shows changes staged for commit
-
+```
+## git rm
+```bash
 git rm file.txt    # removes file.txt both from git and file system
 git rm --cached file.txt # only removes file.txt both from git index
 

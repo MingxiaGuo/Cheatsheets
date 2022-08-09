@@ -1,11 +1,15 @@
-main() Function
+# C
+C Reference Cheat Sheet by Ashlyn Black: https://cheatography.com/ashlyn-black/cheat-sheets/c-reference/
 
+
+main() Function
+```
 * The main() function is the starting point of the program: 	int main (int argc, char *argv[]) 
 * The return type of the main() function is an integer (type int) and it is known as the return value of the program.
 * As a rule of thumb, value 0 means success while non-zero means an error conditions.
-
+```
 Include Files
-
+```c
 * The purpose of these files is to tell the compiler about the existence of external functions which the source code will make use of.
 
 Preprocessor directives:
@@ -26,17 +30,18 @@ Preprocessor directives:
   #ifndef	like #if, compiles if macroname undefined
   #line number [filename]	set origin for __LINE__ and __FILE__
   #pragma	gives the compiler commands
-
+```
 Create and execute a program
-
+```
 In Linux systems: 
     1. Open up a terminal
     2. Create the program: nano nameProgram.c
     3. Write the program and save it
     4. gcc -o nameExecutable nameProgram.c 
+```
 
-32 Reserved words
-
+## 32 Reserved words
+```c
 Term	    Description
 auto	    optional local declaration
 break 	  used to exit loop and used to exit switch
@@ -70,9 +75,10 @@ unsigned	prefix declaration applying to some types
 void	    declaration of a typeless variable
 volatile	prefix declaration meaning the variable can be changed at any time
 while	    executable statement, while loop or do-while loop
+```
 
 Basic types
-
+```c
 Type	    Description
 char	    character type, usually one byte ( a string is array of char )
 int	      integer type, usually 2 or 4 bytes ( default )
@@ -80,28 +86,29 @@ float	    floating point type, usually 4 bytes
 double	  floating point type, usually 8 bytes
 void	    no type, typeless
 enum	    enumeration type ( user defines the type name )
-
+```
 Type modifiers, prefix for basic types
-
+```c
 Modifiers	  Description
 signed	    has a sign ( default )
 unsigned	  no sign bit in variable
 long	      longer version of type (short or long alone means short int or
 short	      shorter version of type long int because int is the default)
 const	       variable can not be stored into
-
+```
 
 Storage Types
-
+```c
 Prefix	   Description
 auto	     local variable ( default )
 static	   permanent when function exits, not auto
 volatile   can change from outside influence
 extern	   variables are defined elsewhere, externally
 register   assign variable to register
+```
 
-Operators
-
+## Operators
+```c
   ( )	  grouping parenthesis, function call
   [ ]	  array indexing, also  [ ][ ]  etc.
   ->   	selector, structure pointer  
@@ -147,12 +154,12 @@ Operators
   ^=   	bitwise exclusive or and store
   |=   	bitwise or and store
   ,    	separator as in   ( y=x,z=++x )
-
+```
 
 Operator precedence
                 
 More precedence
-
+```c
 LR	( ) [ ] -> . x++ x--
 RL	! ~ - + ++x --x * & sizeof (type)
 LR	* / %
@@ -168,11 +175,11 @@ LR	||
 RL	? :
 RL	= += -= *= /= %= >>= <<= &= ^= |=
 LR	,
-
+```
 Less precedence
 
-Conditional branching
-
+## Conditional branching
+```c
  if ( condition ) statement ;
   else statement_2 ;            /* optional  else  clause */
 
@@ -195,9 +202,9 @@ switch ( expression )      /* constants must be unique              */
       default:               /* default executes if no constant equals*/
          statement_sequence  /* the expression. This is optional      */
  }
-
-Function definition
-
+```
+## Function definition
+```c
 type function_name(int a, float b, const char * ch,...) { function_body }
 
 /* only parameters passed by address can are modified*/ 
@@ -236,3 +243,4 @@ enum enum_type                /* enum_name is optional */
   } variable, ...;            /* variables are optional */
 
  /* use dot notation to select a component of a struct or union */
+```

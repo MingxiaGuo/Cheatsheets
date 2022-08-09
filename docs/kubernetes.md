@@ -84,7 +84,7 @@ kubectl scale --replicas=3 -f foo.yaml
 ```
 
 * Execute a command in every pod / replica
-```
+```bash
 for i in 0 1; do kubectl exec foo-$i -- sh -c 'echo $(hostname) > /usr/share/nginx/html/index.html'; done
 ```
 

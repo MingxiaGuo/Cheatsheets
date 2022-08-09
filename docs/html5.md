@@ -2,8 +2,8 @@
  * HTML5 Cheat sheet by Hackr.io
  * Source: https://websitesetup.org/wp-content/uploads/2014/02/HTML-CHEAT-SHEET-768x8555.png
  * ******************************************************************************************* * -->
-
-
+## Document Summary
+```html
 <!-- Document Summary -->
 
 <!DOCTYPE html>                                   <!-- Tells the browser that HTML5 version of HTML to be recognized by the browser -->
@@ -11,8 +11,9 @@
 <head></head>                                     <!-- Contains Information specific to the page like title, styles and scripts -->
 <title></title>                                   <!-- Title for the page that shows up in the browser title bar -->
 <body></body>                                     <!-- Content that the user will see -->
-
-
+```
+## Document Information
+```html
 <!-- Document Information -->
 
 
@@ -21,8 +22,9 @@
 <meta/>                                           <!-- Contains additional information about the page, author, page description and other hidden page info -->
 <script></script>                                 <!-- Contains all scripts internal or external -->
 <link/>                                           <!-- Used to create relationships with external pages and stylesheets -->
-
-
+```
+## Document Structure
+```html
 <!-- Document Structure -->
 
 
@@ -32,8 +34,9 @@
 <span></span>                                     <!-- Inline section or block container used for creating inline style elements -->
 <br/>                                             <!-- Creates a line-break -->
 <hr>                                              <!-- Creates a sectional break into HTML -->
-
-
+```
+## Text Formatting
+```html
 <!-- Text Formatting -->
 
 
@@ -50,8 +53,9 @@
 <sup></sup>                                       <!-- Defines superscripted text -->
 <kbd></kbd>                                       <!-- Specifies text as keyboard input -->
 <small></small>                                   <!-- Specifies small text -->  
-
-
+```
+## Links Formatting
+```html
 <!-- Links Formatting -->
 
 
@@ -60,14 +64,16 @@
 <a href="name"></a>                               <!-- Used to link to a document element -->
 <a href="#name"></a>                              <!-- Used to link to specific div element -->
 <a href="tel://####-####-##"></a>                 <!-- Used to display phone numbers and make them clickable -->
-
-
+```
+## Image Formatting
+```html
 <!-- Image Formatting -->
 
 
 <img src="url" alt="text">                        <!-- Used to display images in a webpage where src="url" contains the link to the image source and alt="" contains an alternative text to display when the image is not displayed -->
-
-
+```
+## List Formatting
+```html
 <!-- List Formatting -->
 
 
@@ -77,8 +83,9 @@
 <dl></dl>                                         <!-- Contains list item definitions -->
 <dt></dt>                                         <!-- Definition of single term inline with body content -->
 <dd></dd>                                         <!-- The descrpition of the defined term -->
-
-
+```
+## Forms Formatting and Attributes
+```html
 <!-- Forms Formatting and Attributes -->
 
 
@@ -121,8 +128,9 @@ autofocus                                         <!-- Specifies that the dropdo
 <optgroup></optgroup>                             <!-- Specifies the entire grouping of available options -->
 <option value=""></option>                        <!-- Defines one of the avaialble option from the dropdown list -->
 <button></button>                                 <!-- A clickable button to submit the form -->
-
-
+```
+## Tables Formatting 
+```html
 <!-- Tables Formatting -->
 
 
@@ -136,13 +144,16 @@ autofocus                                         <!-- Specifies that the dropdo
 <td></td>                                         <!-- Contains actual information in a table cell -->
 <colgroup></colgroup>                             <!-- Groups a single or multiple columns for formatting purposes -->
 <col>                                             <!-- Defines a single column of information inside a table -->
+```
 
-
+## Objects and iFrames
+```html
 <!-- Objects and iFrames -->
 
 
 <object data=""></object>                         <!-- Describes and embed file type including audio, video, PDF's, images -->
-
+## Supported attributes
+```html
 <!-- Supported attributes -->
 type=""                                           <!-- Describes the type of media embedded -->
 height=""                                         <!-- Describes the height of the object in pixels -->
@@ -153,8 +164,10 @@ usemap=""                                         <!-- This is the name of the c
 <embed src="" type="">                            <!-- Acts as a container for external application or plug-in -->
 src=""                                            <!-- The source of the external file you're embedding -->
 width=""                                          <!-- Describes the width of the iframe in pixels -->
+```
 
-
+## HTML5 New Tags
+```html
 <!-- HTML5 New Tags -->
 
 
@@ -180,13 +193,19 @@ width=""                                          <!-- Describes the width of th
 <bdi></bdi>                                       <!-- Helps you format parts of text in a different direction than other text -->
 <time></time>                                     <!-- Identifies the time and date -->
 <wbr>                                             <!-- A line break within the content -->
+```
 
+## Some other useful tags
+```html
 <!-- Some other useful tags -->
 
 <canvas></canvas>                                 <!-- Allows to draw 2D shapes on the web page with the help of javascript -->
 <keygen>                                          <!-- Represents a control for generating a public-private key pair -->
 <map></map>                                       <!-- Specifies an image map -->
+```
 
+## Collective Character Obejcts 
+```html
 <!-- Collective Character Obejcts -->
 
 
@@ -199,3 +218,4 @@ width=""                                          <!-- Describes the width of th
 &#64; &Uuml; @ symbol - @
 &#149; &ouml; Small bullet - .
 &#153; &ucirc; Trademark Symbol - ™
+```

@@ -1,3 +1,4 @@
+# CSS
 /****************************
  * CSS3 CHEATSHEET - Beginner Friendly
  * Learn more: https://web.dev/learn/css/
@@ -39,7 +40,7 @@
 There are many properties related to the font, such as the face, weight, style, etc. These
 properties allow you to change the style or complete look of your text. 
 *******************************/
-
+```css
 /** Body Selector which applies properties to whole body <body></body> */
 body {
   /* Font-Family */
@@ -61,13 +62,13 @@ body {
   /* Font */
   font: style variant weight size family;
 }
-
+```
 /***************************
 ------------ 02: Text -----------
 Text properties allow one to manipulate alignment, spacing, decoration, indentation, etc., in the
 document.
 *******************************/
-
+```css
 /* Applies to all tags with class 'container' ex: <div class="container"></div> */
 .container {
   /* Text-Align */
@@ -91,13 +92,13 @@ document.
   /* Line-Height */
   line-height: normal;
 }
-
+```
 /***************************
 ------------ 03: Background -----------
 As the name suggests, these properties are related to background, i.e., you can change the color,
 image, position, size, etc., of the document.
 *******************************/
-
+```css
 /* Applies to all tags with id 'wrapper' ex: <div id="wrapper"></div> */
 #wrapper {
   /* Background-Image */
@@ -121,13 +122,13 @@ image, position, size, etc., of the document.
   /* Background */
   background: color image repeat attachment position;
 }
-
+```
 /***************************
 ------------ 04: Border -----------
 Border properties are used to change the style, radius, color, etc., of buttons or other items of
 the document.
 *******************************/
-
+```css
 /* You can also select multiple items */
 div,
 .container {
@@ -146,14 +147,14 @@ div,
   /* Border */
   border: width style color;
 }
-
+```
 /***************************
 ------------ 05: Box Model -----------
 In laymen's terms, the CSS box model is a container that wraps around every HTML element. It
 consists of margins, borders, padding, and the actual content.
 It is used to create the design and layout of web pages.
 *******************************/
-
+```css
 .wrapper {
   /* Float */
   float: none;
@@ -179,12 +180,12 @@ It is used to create the design and layout of web pages.
   position: static | relative | fixed | absolute | sticky;
 
 }
-
+```
 /***************************
 ------------ 06: Colors -----------
 With the help of the color property, one can give color to text, shape, or any other object.
 *******************************/
-
+```css
 p,
 span,
 .text {
@@ -199,12 +200,12 @@ span,
   /* Opacity */
   opacity: 1;
 }
-
+```
 /***************************
 ------------ 07: Template Layout -----------
 Specifies the visual look of the content inside a template
 *******************************/
-
+```css
 /* '*' selects all elements on a page */
 * {
   /* Box-Align */
@@ -240,13 +241,13 @@ Specifies the visual look of the content inside a template
   /* min-height */
   min-height: 80px;
 }
-
+```
 /***************************
 ------------ 08: Table -----------
 Table properties are used to give style to the tables in the document. You can change many
 things like border spacing, table layout, caption, etc.
 *******************************/
-
+```css
 table {
   /* Border-Collapse */
   border-collapse: separate;
@@ -263,13 +264,13 @@ table {
   /* Caption-Side */
   caption-side: bottom;
 }
-
+```
 /***************************
 ------------ 09: Columns -----------
 These properties are used explicitly with columns of the tables, and they are used to give the
 table an incredible look.
 *******************************/
-
+```css
 /* Applies to <table class="nice-table"></table> */
 /* Not <table></table> */
 table.nice-table {
@@ -294,12 +295,12 @@ table.nice-table {
   /* Column-span */
   column-span: all;
 }
-
+```
 /***************************
 ------ 10: List & Markers -------
 List and marker properties are used to customize lists in the document.
 *******************************/
-
+```css
 li,
 ul,
 ol {
@@ -315,12 +316,12 @@ ol {
   /* Marker-offset */
   marker-offset: auto;
 }
-
+```
 /***************************
 ------------ 11: Animations -----------
 CSS animations allow one to animate transitions or other media files on the web page.
 *******************************/
-
+```css
 svg,
 .loader {
   /* Animation-name */
@@ -347,12 +348,12 @@ svg,
   /* Animation-fill-mode */
   animation-fill-mode: both;
 }
-
+```
 /***************************
 ------------ 12: Transitions -----------
 Transitions let you define the transition between two states of an element.
 *******************************/
-
+```css
 a,
 button {
   /* Transition-property */
@@ -367,14 +368,14 @@ button {
   /* Transition-delay */
   transition-delay: 20ms;
 }
-
+```
 /***************************
 ------------ 13: CSS Flexbox (Important) -----------
 Flexbox is a layout of CSS that lets you format HTML easily. Flexbox makes it simple to align
 items vertically and horizontally using rows and columns. Items will "flex" to different sizes to fill
 the space. And overall, it makes the responsive design more manageable.
 *******************************/
-
+```css
 /* ---------------------- Parent Properties (flex container) ------------ */
 
 section,
@@ -400,7 +401,7 @@ div#wrapper {
   /* align-content */
   align-content: flex-start | flex-end | center | space-between | space-around;
 }
-
+```
 
 /* ---------------------- Child Properties (flex items) ------------ */
 

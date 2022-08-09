@@ -1,8 +1,22 @@
-#!/bin/bash
-##############################################################################
-# SHORTCUTS and HISTORY
-##############################################################################
+# Bash
 
+https://cheatography.com/clyde-stiller/cheat-sheets/bash-command-line-shortcuts/
+
+https://cheatography.com/davidsouther/cheat-sheets/bash-zsh-shourtcuts/
+
+https://cheatography.com/davechild/cheat-sheets/linux-command-line/
+
+
+```bash
+#!/bin/bash
+...
+...
+...
+```
+
+## Shortcuts and history
+
+```bash
 CTRL+A  # move to beginning of line
 CTRL+B  # moves backward one character
 CTRL+C  # halts the current command
@@ -59,11 +73,11 @@ esc :wq   # exits and saves script
 
 exit      # logs out of current session
 
+```
 
-##############################################################################
-# BASH BASICS
-##############################################################################
+## Bash basics
 
+```bash
 env                 # displays all environment variables
 
 echo $SHELL         # displays the shell you're using
@@ -75,12 +89,12 @@ which bash          # finds out which program is executed as 'bash' (default: /b
 
 clear               # clears content on window (hide displayed lines)
 
+```
 
-##############################################################################
-# FILE COMMANDS
-##############################################################################
+## File Commands
 
 
+```bash
 ls                            # lists your files in current directory, ls <dir> to print files in a specific directory
 ls -l                         # lists your files in 'long format', which contains the exact size of the file, who owns the file and who has the right to look at it, and when it was last modified
 ls -a                         # lists all files in 'long format', including hidden files (name beginning with '.')
@@ -126,11 +140,11 @@ head -y lines.txt | tail +x   # want to display all the lines from x to y. This 
 sed 's/<pattern>/<replacement>/g' <filename> # replace pattern in file with replacement value to std output the character after s (/) is the delimeter 
 sed -i 's/<pattern>/<replacement>/g' <filename> # replace pattern in file with replacement value in place
 echo "this" | sed 's/is/at/g' # replace pattern from input stream with replacement value
+```
 
-##############################################################################
-# DIRECTORY COMMANDS
-##############################################################################
+## Directory Command
 
+```bash
 
 mkdir <dirname>               # makes a new directory
 rmdir <dirname>               # remove an empty directory
@@ -143,16 +157,19 @@ cp -r <dir1> <dir2>           # copy <dir1> into <dir2> including sub-directorie
 pwd                           # tells you where you currently are
 cd ~                          # changes to home.
 cd -                          # changes to previous working directory
+```
 
-##############################################################################
-# SSH, SYSTEM INFO & NETWORK COMMANDS
-##############################################################################
+## ssh
 
 
+```bash
 ssh user@host            # connects to host as user
 ssh -p <port> user@host  # connects to host on specified port as user
 ssh-copy-id user@host    # adds your ssh key to host for user to enable a keyed or passwordless login
 
+```
+##  SYSTEM INFO
+```bash
 whoami                   # returns your username
 su <user>                # switch to a different user
 su -                     # switch to root, likely needs to be sudo su -
@@ -181,21 +198,23 @@ bg                       # lists stopped or background jobs ; resume a stopped j
 fg                       # brings the most recent job in the foreground
 fg <job>                 # brings job to the foreground
 
+time <command>           # report time consumed by command execution
+```
+
+## Network Command
+```bash
 ping <host>              # pings host and outputs results
 whois <domain>           # gets whois information for domain
 dig <domain>             # gets DNS information for domain
 dig -x <host>            # reverses lookup host
 wget <file>              # downloads file
 netstat                  # Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+```
 
-time <command>           # report time consumed by command execution
-
-
-##############################################################################
-# VARIABLES
-##############################################################################
+## Variables
 
 
+```bash
 varname=value                # defines a variable
 varname=value command        # defines a variable to be in the environment of a particular subprocess
 echo $varname                # checks a variable's value
@@ -256,11 +275,11 @@ ${#varname}                  # returns the length of the value of the variable a
 $(UNIX command)              # command substitution: runs the command and returns standard output
 
 typeset -l <x>                 # makes variable local - <x> must be an interger
+```
 
-##############################################################################
-# FUNCTIONS
-##############################################################################
+## Functions
 
+```bash
 
 # The function refers to passed arguments by position (as if they were positional parameters), that is, 1,2, and so forth.
 # @isequalto"1" "2"..."N", where N is the number of positional parameters. $# holds the number of positional parameters.
@@ -272,13 +291,13 @@ function functname() {
 
 unset -f functname  # deletes a function definition
 declare -f          # displays all defined functions in your login session
+```
 
 
-##############################################################################
-# FLOW CONTROLS
-##############################################################################
+## Flow controls
 
 
+```bash
 statement1 && statement2  # and operator
 statement1 || statement2  # or operator
 
@@ -364,12 +383,12 @@ done
 until condition; do
   statements
 done
+```
 
-##############################################################################
-# COMMAND-LINE PROCESSING CYCLE
-##############################################################################
+## Command-Line Processing Cycle
 
 
+```bash
 # The default order for command lookup is functions, followed by built-ins, with scripts and executables last.
 # There are three built-ins that you can use to override this order: `command`, `builtin` and `enable`.
 
@@ -379,11 +398,11 @@ enable   # enables and disables shell built-ins
 
 eval     # takes arguments and run them through the command-line processing steps all over again
 
+```
 
-##############################################################################
-# INPUT/OUTPUT REDIRECTORS
-##############################################################################
+## Input/Output Redircectors REDIRECTORS
 
+```bash
 
 cmd1|cmd2  # pipe; takes standard output of cmd1 as standard input to cmd2
 < file     # takes standard input from file
@@ -408,11 +427,11 @@ n<&-       # closes the input from file descriptor n
 
 |tee <file># output command to both terminal and a file (-a to append to file)
 
+```
 
-##############################################################################
-# PROCESS HANDLING
-##############################################################################
+## Process Handing
 
+```bash
 
 # To suspend a job, type CTRL+Z while it is running. You can also suspend a job with CTRL+Y.
 # This is slightly different from CTRL+Z in that the process is only stopped when it attempts to read input from terminal.
@@ -450,11 +469,11 @@ sleep <number>      # wait # of seconds before continuing
 pv                  # display progress bar for data handling commands. often used with pipe like |pv
 yes                 # give yes response everytime an input is requested from script/process
 
+```
 
-##############################################################################
-# TIPS & TRICKS
-##############################################################################
+## Tips & Tricks
 
+```bash
 
 # set an alias
 cd; nano .bash_profile
@@ -468,11 +487,11 @@ cd; nano .bashrc
 source .bashrc
 cd $websites
 
+```
 
-##############################################################################
-# DEBUGGING SHELL PROGRAMS
-##############################################################################
+## Debugging Shell Programs
 
+```bash
 
 bash -n scriptname  # don't run commands; check for syntax errors only
 set -o noexec       # alternative (set option in script)
@@ -505,10 +524,11 @@ function returntrap {
 }
 
 trap returntrap RETURN  # is executed each time a shell function or a script executed with the . or source commands finishes executing
+```
 
-##############################################################################
-# COLORS AND BACKGROUNDS 
-##############################################################################
+## Colors and Backgrounds 
+
+```bash
 # note: \e or \x1B also work instead of \033 
 # Reset
 Color_Off='\033[0m' # Text Reset
@@ -569,3 +589,4 @@ echo -e "${Green}This is GREEN text${Color_Off} and normal text"
 echo -e "Red{On_White}This is Red test on White background${Color_Off}" 
 # option -e is mandatory, it enable interpretation of backslash escapes
 printf "${Red} This is red \n"
+```

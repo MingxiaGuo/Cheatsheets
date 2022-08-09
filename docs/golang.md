@@ -25,7 +25,8 @@
 -   Standard Libs
     -   [Package fmt](#package-fmt)
 
-## Hello World
+## Introduction
+### Hello World
 
 ```go
 package main
@@ -41,7 +42,7 @@ func main() {
 
 <hr/>
 
-## Go CLI Commands
+### Go CLI Commands
 
 ```bash
 # Compile & Run code
@@ -84,7 +85,7 @@ $ go version
 
 <hr/>
 
-## Go Modules
+### Go Modules
 
 -   Go projects are called **modules**
 -   Each module has multiple **packages**
@@ -107,7 +108,9 @@ Example: github.com/spf13/cobra
 
 [Return to Summary](#summary)
 
-## Basic Types
+## Basic
+
+### Basic Types
 
 |    Type    |               Set of Values                |                    Values                     |
 | :--------: | :----------------------------------------: | :-------------------------------------------: |
@@ -133,7 +136,7 @@ Example: github.com/spf13/cobra
 
 <hr/>
 
-## Variables
+### Variables
 
 ```go
 // Declaration
@@ -173,7 +176,7 @@ const pi = 3.1415
 
 <hr/>
 
-## Operators
+### Operators
 
 [Return to Summary](#summary)
 
@@ -213,7 +216,7 @@ Logical Operators
 
 <hr/>
 
-## Conditional Statements
+### Conditional Statements
 
 ```go
 // If / Else
@@ -276,7 +279,7 @@ switch {
 
 <hr/>
 
-## Loops
+### Loops
 
 ```go
 // Golang only has the for loop
@@ -302,7 +305,7 @@ for {
 
 <hr/>
 
-## Arrays
+### Arrays
 
 ```go
 // Declaration with specified size
@@ -368,7 +371,7 @@ for _, value := range slice {
 
 <hr/>
 
-## Functions
+### Functions
 
 ```go
 // Functions acts as a scoped block of code
@@ -457,7 +460,8 @@ calculator(12) // 60
 
 <hr/>
 
-## Structs
+## Adanced
+### Structs
 
 Structs are a way to arrange data in specific formats.
 
@@ -486,7 +490,7 @@ person3.Age // 0
 
 <hr/>
 
-## Maps
+### Maps
 
 Maps are data structures that holds values assigneds to a key.
 
@@ -518,7 +522,7 @@ value // ""
 
 <hr/>
 
-## Pointers
+### Pointers
 
 Pointers are a direct reference to a memory address that some variable or value is being stored.
 
@@ -554,7 +558,7 @@ Obs: Unlike C, Go doesn't have pointer arithmetics.
 
 <hr/>
 
-## Methods and Interfaces
+### Methods and Interfaces
 
 Go doesn't have classes. But you can implement methods, interfaces and almost everything contained in OOP, but in what gophers call "Go Way"
 
@@ -593,7 +597,7 @@ func (car *Car) Accelerate() {
 
 <hr/>
 
-## Errors
+### Errors
 
 Go doesn't support `throw`, `try`, `catch` and other common error handling structures. Here, we use `error` package to build possible errors as a returning parameter in functions
 
@@ -621,7 +625,7 @@ errorB // Error("Parameter text is empty")
 
 <hr/>
 
-## Testing
+### Testing
 
 Go has a built-in library to unit testing. In a separate file you insert tests for functionalities of a file and run `go test package` to run all tests of the actual package or `go test path` to run a specific test file.
 
@@ -651,7 +655,7 @@ func TestSum(t *testing.T) {
 
 <hr/>
 
-## Concurrency
+### Concurrency
 
 One of the main parts that make Go attractive is its form to handle with concurrency. Different than parallelism, where tasks can be separated in many cores that the machine processor have, in concurrency we have routines that are more lightweight than threads and can run asynchronously, with memory sharing and in a single core.
 
@@ -804,7 +808,8 @@ for value := range channel {
 
 <hr/>
 
-## Package `fmt`
+## Standard Libs
+### Package `fmt`
 
 ```go
 import "fmt"

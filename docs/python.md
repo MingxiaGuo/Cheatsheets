@@ -14,7 +14,11 @@
 
     `$ python <filename.py>` or `$ python3 <filename.py>`
 
-#### By default, python doesn't require any imports to run a python file.
+ By default, python doesn't require any imports to run a python file.
+
+ Python 是解释型语言，即脚本语言，运行过程是从上往下，逐行解析运行
+
+ Python 为什么没有 main 函数？为什么我不推荐写 main 函数？: https://www.cnblogs.com/pythonista/p/13040342.html
 
 ## Create and execute a program
 
@@ -23,7 +27,12 @@
 1. Write the program and save it
 1. python nameProgram.py
 
-<br>
+## Hello World
+```python
+#!/usr/bin/python3
+
+print("Hello, World!")
+```
 
 ### Basic Datatypes
 
