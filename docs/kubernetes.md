@@ -38,36 +38,38 @@ kubectl config set-context --current --namespace=namespace_name
 
 ## Viewing, Finding resources
 
+* Get a complete list of supported resources
+
+  ```
+  kubectl api-resources
+  ```
+
+* Get a detailed description of that resource
+
+  ```shell
+  kubectl explain <resource>
+  kubectl explain pods
+  ```
+
 * List all services in the namespace
-```
-kubectl get services
-```
 
-* List all pods in all namespaces in wide format
-```
-kubectl get pods -o wide --all-namespaces
-```
-
-* List all pods in json (or yaml) format
-```
-kubectl get pods -o json
-```
-
+  ```shell
+  kubectl get node
+  kubectl get services # List all services in the namespace
+  kubectl get pods -o wide --all-namespaces # List all pods in all namespaces in wide format
+  kubectl get pods -o json # List all pods in json (or yaml) format
+  kubectl get services --sort-by=.metadata.name # List services sorted by name
+  kubectl get pods --sort-by='.status.containerStatuses[0].restartCount' # List pods sorted by restart count
+  
+  kubectl get VirtualMachine -o custom-columns="Name:.metadata.name,Namespace:.metadata.namespace" -A # List name and namespcae of the resource VirtualMachine
+  
+  ```
 * Describe resource details (node, pod, svc)
-```
-kubectl describe nodes my-node
-```
 
-* List services sorted by name
-```
-kubectl get services --sort-by=.metadata.name
-```
-
-* List pods sorted by restart count
-```
-kubectl get pods --sort-by='.status.containerStatuses[0].restartCount'
-```
-
+  ```shell
+  kubectl describe nodes <node-name>
+  kubectl describe pod <pod-name> -n <namespace>
+  ```
 * Rolling update pods for frontend-v1
 ```
 kubectl rolling-update frontend-v1 -f frontend-v2.json
@@ -87,6 +89,14 @@ kubectl scale --replicas=3 -f foo.yaml
 ```bash
 for i in 0 1; do kubectl exec foo-$i -- sh -c 'echo $(hostname) > /usr/share/nginx/html/index.html'; done
 ```
+
+
+
+```
+kubectl edit deployments <pod-name> -n genctl
+```
+
+
 
 ## Manage Resources
 

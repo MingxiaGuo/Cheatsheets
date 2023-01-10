@@ -23,21 +23,19 @@ https://www.jianshu.com/p/4079284dd970
 
 
 
-## common
+## basic
 ```bash
-git init            # initiates git in the current directory
+git init              # initiates git in the current directory
 git add <file_name>   # adds(stages) file.txt to the git
-git add .          # adds(stages) all new modifications, deletions, creations to the git
-git status         # shows the modifications and stuff that are not staged yet
-git fetch     # 下载远程仓库最新内容，不做合并 
+git add .             # adds(stages) all new modifications, deletions, creations to the git
+git status            # shows the modifications and stuff that are not staged yet
+git fetch             # 下载远程仓库最新内容，不做合并 
 
 
 git 放弃本地修改，强制拉取更新
 * git fetch --all 
 * git reset --hard origin/master 
 * git pull //可以省略
-
-
 ```
 ## git clone
 ```bash
@@ -208,9 +206,13 @@ git stash branch my-branch stash@{1} # creates a branch from your stash
 git stash drop stash@{1}             # deletes the {1} stash
 git stash clear                      # clears all the stash
 ```
-```sh
-git show                    # shows one or more objects (blobs, trees, tags and commits).
 
+## git show
+```bash
+git show                    # shows one or more objects (blobs, trees, tags and commits).
+```
+## git diff
+```bash
 git diff                     # show changes between commits, commit and working tree
 git diff HEAD               #show changes between working directory vs last commit
 git diff --staged HEAD    #show changes between stage area vs last commit

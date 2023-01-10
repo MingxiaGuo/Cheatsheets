@@ -1,45 +1,18 @@
 # CSS
-/****************************
  * CSS3 CHEATSHEET - Beginner Friendly
  * Learn more: https://web.dev/learn/css/
  * Documentation: https://developer.mozilla.org/en-US/docs/Web/CSS
  * PDF for Better Readability: https://github.com/LeCoupa/awesome-cheatsheets/files/8880372/CSS_Cheatsheet.pdf
  * Brief overview about CSS: http://jonkinney.com/assets/21/advanced_css.pdf
  * (Advance) Know more about each topic in-depth: https://www.ciwcertified.com/resources/documents/sample-chapter/CCT02CDHTCSCK1405.PDF
- *
- *
- *
- *  Table of contents
- *  -------------------
- *  01 | Font
- *  02 | Text
- *  03 | Background
- *  04 | Border
- *  05 | Box Model
- *  06 | Colors
- *  07 | Template Layout
- *  08 | Table
- *  09 | Columns
- *  10 | List & Markers
- *  11 | Animations
- *  12 | Transitions
- *  13 | CSS Flexbox (Important)
- *        - Parent Properties (flex container)
- *        - Child Properties (flex items)
- *  14 | CSS Grid (Useful in Complex Web Designs)
- *        - Parent Properties (Grid container)
- *        - Child Properties (Grid items)
- *  15 | Media Queries
- *
- *
- *
- *****************************/
 
-/***************************
------------- 01: Font -----------
+---
+
+##  01: Font
+
 There are many properties related to the font, such as the face, weight, style, etc. These
 properties allow you to change the style or complete look of your text. 
-*******************************/
+
 ```css
 /** Body Selector which applies properties to whole body <body></body> */
 body {
@@ -63,11 +36,11 @@ body {
   font: style variant weight size family;
 }
 ```
-/***************************
------------- 02: Text -----------
+## 02: Text
+
 Text properties allow one to manipulate alignment, spacing, decoration, indentation, etc., in the
 document.
-*******************************/
+
 ```css
 /* Applies to all tags with class 'container' ex: <div class="container"></div> */
 .container {
@@ -93,11 +66,11 @@ document.
   line-height: normal;
 }
 ```
-/***************************
------------- 03: Background -----------
+## 03: Background
+
 As the name suggests, these properties are related to background, i.e., you can change the color,
 image, position, size, etc., of the document.
-*******************************/
+
 ```css
 /* Applies to all tags with id 'wrapper' ex: <div id="wrapper"></div> */
 #wrapper {
@@ -123,11 +96,11 @@ image, position, size, etc., of the document.
   background: color image repeat attachment position;
 }
 ```
-/***************************
------------- 04: Border -----------
+## 04: Border
+
 Border properties are used to change the style, radius, color, etc., of buttons or other items of
 the document.
-*******************************/
+
 ```css
 /* You can also select multiple items */
 div,
@@ -148,12 +121,12 @@ div,
   border: width style color;
 }
 ```
-/***************************
------------- 05: Box Model -----------
+## 05: Box Model
+
 In laymen's terms, the CSS box model is a container that wraps around every HTML element. It
 consists of margins, borders, padding, and the actual content.
 It is used to create the design and layout of web pages.
-*******************************/
+
 ```css
 .wrapper {
   /* Float */
@@ -181,10 +154,10 @@ It is used to create the design and layout of web pages.
 
 }
 ```
-/***************************
------------- 06: Colors -----------
+## 06: Colors
+
 With the help of the color property, one can give color to text, shape, or any other object.
-*******************************/
+
 ```css
 p,
 span,
@@ -201,10 +174,10 @@ span,
   opacity: 1;
 }
 ```
-/***************************
------------- 07: Template Layout -----------
+## 07: Template Layout
+
 Specifies the visual look of the content inside a template
-*******************************/
+
 ```css
 /* '*' selects all elements on a page */
 * {
@@ -242,11 +215,11 @@ Specifies the visual look of the content inside a template
   min-height: 80px;
 }
 ```
-/***************************
------------- 08: Table -----------
+## 08: Table
+
 Table properties are used to give style to the tables in the document. You can change many
 things like border spacing, table layout, caption, etc.
-*******************************/
+
 ```css
 table {
   /* Border-Collapse */
@@ -265,11 +238,11 @@ table {
   caption-side: bottom;
 }
 ```
-/***************************
------------- 09: Columns -----------
+## 09: Columns
+
 These properties are used explicitly with columns of the tables, and they are used to give the
 table an incredible look.
-*******************************/
+
 ```css
 /* Applies to <table class="nice-table"></table> */
 /* Not <table></table> */
@@ -296,10 +269,10 @@ table.nice-table {
   column-span: all;
 }
 ```
-/***************************
------- 10: List & Markers -------
+## 10: List & Markers
+
 List and marker properties are used to customize lists in the document.
-*******************************/
+
 ```css
 li,
 ul,
@@ -317,10 +290,10 @@ ol {
   marker-offset: auto;
 }
 ```
-/***************************
------------- 11: Animations -----------
+## 11: Animations
+
 CSS animations allow one to animate transitions or other media files on the web page.
-*******************************/
+
 ```css
 svg,
 .loader {
@@ -349,10 +322,10 @@ svg,
   animation-fill-mode: both;
 }
 ```
-/***************************
------------- 12: Transitions -----------
+## 12: Transitions
+
 Transitions let you define the transition between two states of an element.
-*******************************/
+
 ```css
 a,
 button {
@@ -369,12 +342,14 @@ button {
   transition-delay: 20ms;
 }
 ```
-/***************************
------------- 13: CSS Flexbox (Important) -----------
+## 13: CSS Flexbox (Important)
+
 Flexbox is a layout of CSS that lets you format HTML easily. Flexbox makes it simple to align
 items vertically and horizontally using rows and columns. Items will "flex" to different sizes to fill
 the space. And overall, it makes the responsive design more manageable.
-*******************************/
+
+#### Parent Properties (flex container)
+
 ```css
 /* ---------------------- Parent Properties (flex container) ------------ */
 
@@ -402,7 +377,9 @@ div#wrapper {
   align-content: flex-start | flex-end | center | space-between | space-around;
 }
 ```
+#### Child Properties (flex items)
 
+```css
 /* ---------------------- Child Properties (flex items) ------------ */
 
 p,
@@ -419,90 +396,94 @@ a {
 
     /* flex-grow */
     flex-grow: 4; /* default 0 */
-
+    
     /* flex-shrink */
     flex-shrink: 3; /* default 1 */
-
+    
     /* flex-basis */
     flex-basis: | auto; /* default auto */
-
+    
     /* flex shorthand */
     flex: none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]
-
+    
     /* align-self */
     align-self: auto | flex-start | flex-end | center | baseline | stretch;
 }
+```
+## 14: CSS Grid (Useful in Complex Web Designs) 
 
-/***************************
------------- 14: CSS Grid (Useful in Complex Web Designs) -----------
 Grid layout is a 2-Dimensional grid system to CSS that creates complex responsive web design
 layouts more easily and consistently across browsers.
-*******************************/
 
+#### Parent Properties (Grid container)
 
+```css
 /* ---------------------- Parent Properties (Grid container) ------------ */
 
 section,
 div#wrapper {
     /* display */
     display: grid | inline-grid;
+  
+/* grid-template-columns */
+grid-template-columns: 12px 12px 12px;
 
-    /* grid-template-columns */
-    grid-template-columns: 12px 12px 12px;
+/* grid-template-rows */
+grid-template-rows: 8px auto 12px;
 
-    /* grid-template-rows */
-    grid-template-rows: 8px auto 12px;
+/* grid-template */
+grid-template: none | <grid-template-rows> / <grid-template-columns>;
 
-    /* grid-template */
-    grid-template: none | <grid-template-rows> / <grid-template-columns>;
+/* column-gap */
+column-gap: <line-size>;
 
-    /* column-gap */
-    column-gap: <line-size>;
+/* row-gap */
+row-gap: <line-size>;
 
-    /* row-gap */
-    row-gap: <line-size>;
+/* grid-column-gap */
+grid-column-gap: <line-size>;
 
-    /* grid-column-gap */
-    grid-column-gap: <line-size>;
+/* grid-row-gap */
+grid-row-gap: <line-size>;
 
-    /* grid-row-gap */
-    grid-row-gap: <line-size>;
+/* gap shorthand */
+gap: <grid-row-gap> <grid-column-gap>;
 
-    /* gap shorthand */
-    gap: <grid-row-gap> <grid-column-gap>;
+/* grid-gap shorthand */
+grid-gap: <grid-row-gap> <grid-column-gap>;
 
-    /* grid-gap shorthand */
-    grid-gap: <grid-row-gap> <grid-column-gap>;
+/* justify-items */
+justify-items: start | end | center | stretch;
 
-    /* justify-items */
-    justify-items: start | end | center | stretch;
+/* align-items */
+align-items: start | end | center | stretch;
 
-    /* align-items */
-    align-items: start | end | center | stretch;
+/* place-items */
+place-items: center;
 
-    /* place-items */
-    place-items: center;
+/* justify-content */
+justify-content: start | end | center | stretch | space-around | space-between;
 
-    /* justify-content */
-    justify-content: start | end | center | stretch | space-around | space-between;
+/* align-content */
+align-content: start | end | center | stretch | space-around | space-between;
 
-    /* align-content */
-    align-content: start | end | center | stretch | space-around | space-between;
+/* place-content */
+place-content: <align-content> / <justify-content>;
 
-    /* place-content */
-    place-content: <align-content> / <justify-content>;
+/* grid-auto-columns */
+grid-auto-columns: <track-size> ...;
 
-    /* grid-auto-columns */
-    grid-auto-columns: <track-size> ...;
+/* grid-auto-rows */
+grid-auto-rows: <track-size> ...;
 
-    /* grid-auto-rows */
-    grid-auto-rows: <track-size> ...;
-
-    /* grid-auto-flow */
-    grid-auto-flow: row | column | row dense | column dense;
-
+/* grid-auto-flow */
+grid-auto-flow: row | column | row dense | column dense;
 }
+```
 
+#### Child Properties (Grid items)
+
+```css
 
 /* ---------------------- Child Properties (Grid items) ------------ */
 
@@ -520,37 +501,38 @@ a {
 
     /* grid-column-end */
     grid-column-end: <number> | <name> | span <number> | span <name> | auto;
-
+    
     /* grid-row-start */
     grid-row-start: <number> | <name> | span <number> | span <name> | auto;
-
+    
     /* grid-row-end */
     grid-row-end: <number> | <name> | span <number> | span <name> | auto;
-
+    
     /* grid-column shorthand */
     grid-column: <start-line> / <end-line> | <start-line> / span <value>;
-
+    
     /* grid-row shorthand */
     grid-row: <start-line> / <end-line> | <start-line> / span <value>;
-
+    
     /* grid-area */
     grid-area: <name> | <row-start> / <column-start> / <row-end> / <column-end>;
-
+    
     /* justify-self */
     justify-self: start | end | center | stretch;
-
+    
     /* align-self */
     align-self: start | end | center | stretch;
-
+    
     /* place-self */
     place-self: center;
 }
+```
 
+## 15: MEDIA QUERIES
 
-/***************************
------------- 15: MEDIA QUERIES -----------
 Using media queries are a popular technique for delivering a tailored style sheet to
 desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones).
+```
 |----------------------------------------------------------|
 |  Responsive Grid Media Queries - 1280, 1024, 768, 480    |
 |   1280-1024   - desktop (default grid)                   |
@@ -558,75 +540,77 @@ desktops, laptops, tablets, and mobile phones (such as iPhone and Android phones
 |   768-480     - tablet                                   |
 |   480-less    - phone landscape & smaller                |
 |----------------------------------------------------------|
-*******************************/
+```
 
+
+```css
 
 @media all and (min-width: 1024px) and (max-width: 1280px) { }
- 
+
 @media all and (min-width: 768px) and (max-width: 1024px) { }
- 
+
 @media all and (min-width: 480px) and (max-width: 768px) { }
- 
+
 @media all and (max-width: 480px) { }
- 
+
 /* Small screens - MOBILE */
 @media only screen { } /* Define mobile styles - Mobile First */
- 
+
 @media only screen and (max-width: 40em) { } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
- 
+
 /* Medium screens - TABLET */
 @media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
- 
+
 @media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
- 
+
 /* Large screens - DESKTOP */
 @media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
- 
+
 @media only screen and (min-width: 64.063em) and (max-width: 90em) { } /* min-width 1024px and max-width 1440px, use when QAing large screen-only issues */
- 
+
 /* XLarge screens */
 @media only screen and (min-width: 90.063em) { } /* min-width 1441px, xlarge screens */
- 
+
 @media only screen and (min-width: 90.063em) and (max-width: 120em) { } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
- 
+
 /* XXLarge screens */
 @media only screen and (min-width: 120.063em) { } /* min-width 1921px, xlarge screens */
- 
+
 /*------------------------------------------*/
+
  
- 
- 
+
 /* Portrait */
 @media screen and (orientation:portrait) { /* Portrait styles here */ }
 /* Landscape */
 @media screen and (orientation:landscape) { /* Landscape styles here */ }
- 
- 
+
+
 /* CSS for iPhone, iPad, and Retina Displays */
- 
+
 /* Non-Retina */
 @media screen and (-webkit-max-device-pixel-ratio: 1) {
 }
- 
+
 /* Retina */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
 }
- 
+
 /* iPhone Portrait */
 @media screen and (max-device-width: 480px) and (orientation:portrait) {
 } 
- 
+
 /* iPhone Landscape */
 @media screen and (max-device-width: 480px) and (orientation:landscape) {
 }
- 
+
 /* iPad Portrait */
 @media screen and (min-device-width: 481px) and (orientation:portrait) {
 }
- 
+
 /* iPad Landscape */
 @media screen and (min-device-width: 481px) and (orientation:landscape) {
 }
