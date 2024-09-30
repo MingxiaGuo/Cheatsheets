@@ -25,8 +25,8 @@ sudo resize2fs /dev/disk/by-id/scsi-0DO_example # Resize volume
 ps -ax | grep myprocessname # Search processes
 kill -9 PROCESS_ID # Kill process PID
 
-
 ## basic
+
 ```sh
 passwd   # let you change your password
 useradd gmx # create a user account called gmx, and add the account to the group，通过命令创建的用户在/etc/passwd文件里的， 组的信息我们放在/etc/group文件中
@@ -71,7 +71,6 @@ export JAVA_HOME=/root/jdk-XXX_linux-x64 # 配置环境变量，export命令仅�
 export PATH=$JAVA_HOME/bin:$PATH
 ```
 
-
 ```sh
 [root@deployer ~]# useradd -h
 Usage: useradd [options] LOGIN
@@ -98,6 +97,7 @@ root:x:0:
 ......
 cliu8:x:1000:
 ```
+
 第一个字段的第一个字符是**文件类型**，如果是“-”，表示普通文件；如果是d，就表示目录。第一个字段剩下的9个字符是**模式**，其实就是**权限位**（access permission bits）。3个一组，每一组rwx表示“读（read）”“写（write）”“执行（execute）”。如果是字母，就说明有这个权限；如果是横线，就是没有这个权限。这三组分别表示文件所属的用户权限、文件所属的组权限以及其他用户的权限。如果想改变权限，可以使用命令chmod 711 hosts。第二个字段是**硬链接**（hard link）**数目**，这个比较复杂，讲文件的时候我会详细说。第三个字段是**所属用户**，第四个字段是**所属组**。第五个字段是文件的大小，第六个字段是**文件被修改的日期**，最后是**文件名**。你可以通过命令chown改变所属用户，chgrp改变所属组。
 
 ```
@@ -180,13 +180,12 @@ systemd的机制十分复杂，这里咱们不讨论。如果有兴趣，你可�
 sudo ifconfig utun3 mtu 1354
 ```
 
-
-
-## systemctl 
+## systemctl
 
 systemctl may be used to introspect and control the state of the "systemd" system and service manager.
 
 systemctl cheatsheet: https://access.redhat.com/sites/default/files/attachments/12052018_systemd_6.pdf
+
 ```bash
 systemctl status service   # See if service is running/enabled
 systemctl stop service     # Stop a running service
@@ -195,8 +194,11 @@ systemctl restart service  # Restart a running service
 systemctl enable service   # Enable a service to start on boot， systemctl enable mysql
 systemctl disable service  # Disable service--won’t start at boot
 ```
+
 ## journalctl
+
 VIEWING LOG MESSAGES
+
 ```bash
 journalctl Show all collected log messages
 journalctl -u network.service See network service messages
@@ -205,6 +207,7 @@ journalctl -k Show only kernel messages
 ```
 
 ## Change or Set Password
+
 ```bash
 root@test-gmx-stunnel:~# passwd
 New password:
@@ -213,8 +216,8 @@ passwd: password updated successfully
 root@test-gmx-stunnel:~#
 ```
 
-
 ## Vi
+
 ### 快速移动光标
 
 移动光标至行首：shift + 6；Home键=Fn+左方向
@@ -224,3 +227,19 @@ root@test-gmx-stunnel:~#
 向前移动一个单词:
 
 向后移动一个单词
+
+## tmux
+
+```.sh
+tmux 
+
+tmux new -s  <session-name>
+
+tmux attach 
+
+tmux attach -t<session-number>/<session-name>
+
+tmux kill-session -t <session-number>/<session-name>
+
+Ctrl+b d：分离当前会话 / tmux detach
+```
